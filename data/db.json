@@ -36,6 +36,28 @@
       ],
       "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
       "cookingTime": "35 minutes"
+    },
+    {
+      "id": "d91d",
+      "title": "Semo",
+      "ingredients": [
+        "water",
+        "salt",
+        "semo flour"
+      ],
+      "method": "blah blah blah",
+      "cookingTime": "25minutes"
+    },
+    {
+      "id": "048f",
+      "title": "Rice",
+      "ingredients": [
+        "water",
+        "salt",
+        "spicies"
+      ],
+      "method": "blah blah blah",
+      "cookingTime": "35minutes"
     }
   ]
 }
