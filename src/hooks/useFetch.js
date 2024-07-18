@@ -6,17 +6,14 @@ export const useFetch = (url, method = "GET") => {
   const [error, setError] = useState(null)
   const [options, setOptions] = useState(null)
 
-
   const postData = (postData) => {
     setOptions({
       method: "POST",
-      headers:{
+      headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(postData)
     })
-
-
   }
 
   useEffect(() => {
@@ -45,10 +42,11 @@ export const useFetch = (url, method = "GET") => {
       }
     }
 
-    if (method === 'GET'){
+    // invoke the function
+    if (method === "GET") {
       fetchData()
     }
-    if (method === "POST" && options){
+    if (method === "POST" && options) {
       fetchData(options)
     }
 
@@ -56,7 +54,7 @@ export const useFetch = (url, method = "GET") => {
       controller.abort()
     }
 
-  }, [url, options, method])
+  }, [url, method, options])
 
   return { data, isPending, error, postData }
 }
