@@ -1,0 +1,47 @@
+[33mcommit 012c2f9abb55ef2114c9ff528c49fcb373ed723f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Rotimi Jude <excel.rotimi@gmail.com>
+Date:   Fri Jul 19 16:20:28 2024 -0400
+
+    created a context and provider and also accesed the context values
+
+[33mcommit a6037d02e4485567f50520f75da57d0a118a003e[m
+Author: Rotimi Jude <excel.rotimi@gmail.com>
+Date:   Fri Jul 19 11:47:08 2024 -0400
+
+    still adding finishing touches
+
+[33mcommit a7c3c57dcfc22bd713272bfc68a590566c4e52ad[m
+Author: Rotimi Jude <excel.rotimi@gmail.com>
+Date:   Thu Jul 18 07:00:08 2024 -0400
+
+    adding finishing touches
+
+[33mcommit b6250ae3f02cbf57c0207bd8ba537700eb5d7e28[m
+Author: Rotimi Jude <excel.rotimi@gmail.com>
+Date:   Tue Jul 16 07:14:13 2024 -0400
+
+    Created the search bar components and the search results page...
+
+[33mcommit c927ab35018b459ac3f44bbccb2baa4e9cd8ccd4[m
+Author: Rotimi Jude <excel.rotimi@gmail.com>
+Date:   Mon Jul 15 16:19:25 2024 -0400
+
+    the useFetch hook wass updated, create recipe page now functioning
+
+[33mcommit 87e9c4f41fd193b30f6eed97d29aec0a6b632e57[m
+Author: Rotimi Jude <excel.rotimi@gmail.com>
+Date:   Mon Jul 15 11:16:51 2024 -0400
+
+    second commit
+
+[33mcommit 71f7dbb3be199d54e27cd9f3e7317417258bf17e[m
+Author: Rotimi Jude <excel.rotimi@gmail.com>
+Date:   Sat Jul 13 08:04:29 2024 -0400
+
+    first commit
+
+[33mcommit 344513c67d923a313756b5d0718c4588e0829460[m
+Author: Rotimi Jude <excel.rotimi@gmail.com>
+Date:   Tue Jul 2 08:26:29 2024 -0400
+
+    Initialize project using Create React App
