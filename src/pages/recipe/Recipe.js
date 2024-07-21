@@ -1,27 +1,45 @@
 import {useFetch} from "../../hooks/useFetch"
 import {useParams, useHistory} from "react-router-dom"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import './Recipe.css'
 import {useTheme} from '../../hooks/useTheme'
+import { projectFirestore } from "../../firebase/config"
 
 export default function Recipe() {
   const {id} = useParams()
-  const url = 'http://localhost:3000/recipes/' + id
-  const {data:recipes, isPending, error} = useFetch(url)
-  const history = useHistory()
+  //  const history = useHistory()
   const {mode} = useTheme()
 
-  useEffect( ()=> {
-    if (error){
-        // redirect
-        //history.goBack()
-        
-        setTimeout(() => {
-            history.push('/')
-        }, 2000)
+  const [recipes, setRecipes] = useState(null)
+  const [isPending, setIsPending] = useState(false)
+  const [error, setError] = useState(false)
 
-    }
-}, [error, history])
+  useEffect(() =>{
+    setIsPending(true)
+
+    projectFirestore.collection('recipes').doc(id).get().then((doc) =>{
+      if (doc.exists){
+        setIsPending(false)
+        setRecipes(doc.data())
+      }else{
+        setIsPending(false)
+        setError('could not fine that recipe you are looking for')
+      }
+
+    })
+  },[id])
+
+//   useEffect( ()=> {
+//     if (error){
+//         // redirect
+//         //history.goBack()
+        
+//         setTimeout(() => {
+//             history.push('/')
+//         }, 2000)
+
+//     }
+// }, [error, history])
   return (
     <div className={`recipe ${mode}`}>
       {isPending && <div className="loading">Loading...</div>}
