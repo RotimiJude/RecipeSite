@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Trashcan from '../assets/trashcan.svg'
 
 // styles
 import './RecipeList.css'
