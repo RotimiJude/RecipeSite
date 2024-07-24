@@ -17,7 +17,7 @@ export default function Recipe() {
   useEffect(() =>{
     setIsPending(true)
 
-    projectFirestore.collection('recipes').doc(id).get().then((doc) =>{
+    const unsub = projectFirestore.collection('recipes').doc(id).onSnapshot((doc) =>{
       if (doc.exists){
         setIsPending(false)
         setRecipes(doc.data())
@@ -27,7 +27,15 @@ export default function Recipe() {
       }
 
     })
+    return () => unsub()
   },[id])
+
+  // const handleClick = () =>{
+  //   projectFirestore.collection('recipes').doc(id).update({
+  //     title:'Something completely different'
+  //   })
+
+  // }
 
 //   useEffect( ()=> {
 //     if (error){
@@ -51,6 +59,7 @@ export default function Recipe() {
         {recipes.ingredients.map(ing => <li key={ing}>{ing}</li>)}
       </ul>
       <p className="method">{recipes.method}</p>
+      {/* <button onClick={handleClick}>Update Me</button> */}
       </>)}
     </div>
   )
